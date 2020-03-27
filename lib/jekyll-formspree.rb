@@ -15,7 +15,7 @@ class Formspree < Liquid::Tag
       tmpl = File.read tmpl_path
       tmpl = (Liquid::Template.parse tmpl).render site.site_payload.merge!({"formspree_id" => @formspree_id})
     else
-      %Q{<form action="https://formspree.io/#{ @formspree_id }" method="POST" ><label>Votre email:<input type="text" name="_replyto"></label><label>Votre message:<textarea name="message"></textarea></label><button type="submit">Envoyer</button></form>}
+      %Q{<form action="https://formspree.io/#{ @formspree_id }" method="POST" ><p><label>Your email:</label><br /><input type="text" name="_replyto"></p><p><label>Your message:</label><br /><textarea name="message"></textarea></p><p><button type="submit">Send</button></p></form>}
     end
   end
 
