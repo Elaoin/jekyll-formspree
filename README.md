@@ -56,4 +56,4 @@ By default the plugin will output the following code
 </form>
 ```
 
-You can specify your own snippet by creating a partial ``_includes/formspree.html``. Inside that partial the Youtube ID is available as ``{{ formspree_id }}``.
+You can specify your own snippet by creating a partial ``_includes/formspree.html``. Inside that partial the Formspree ID is available as ``{{ formspree_id }}``.
