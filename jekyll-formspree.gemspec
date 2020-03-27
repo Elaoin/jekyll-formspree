@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'jekyll-formspree'
-  s.version     = '0.0.3'
+  s.version     = '0.0.5'
   s.date        = '2020-03-27'
   s.summary     = "Generate form snippets for Formspree's contact forms"
   s.description = "Generate form snippets for Formspree's contact forms"
