@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-formspree.svg)](https://badge.fury.io/rb/jekyll-formspree)
 
-This Jekyll pluging provides a tag that generate form snippets to add Formspree's contact forms to your site.
+This Jekyll plugin provides a tag that generate form snippets to add Formspree's contact forms to your site.
 
 ## Installation
 
