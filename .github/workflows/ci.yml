@@ -1,0 +1,33 @@
+name: Tests
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: ["3.3", "3.4", "4.0"]
+        jekyll: ["~> 4.4"]
+        include:
+          - ruby: "3.3"
+            jekyll: "~> 3.10"
+    name: Ruby ${{ matrix.ruby }} / Jekyll ${{ matrix.jekyll }}
+    env:
+      JEKYLL_VERSION: ${{ matrix.jekyll }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - run: bundle exec rake test
+      - name: Build the gem
+        run: gem build jekyll-formspree.gemspec
