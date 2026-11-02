@@ -1,0 +1,11 @@
+<style>
+  .formspree-form label, .formspree-form input, .formspree-form textarea { display: block; width: 100%; box-sizing: border-box; }
+  .formspree-form input, .formspree-form textarea { margin: 0.25em 0 1em; padding: 0.5em; font: inherit; }
+</style>
+<form class="formspree-form" action="{{ formspree_url | escape }}" method="POST" accept-charset="utf-8">
+  <label for="formspree-email">Your email</label>
+  <input type="email" id="formspree-email" name="email" autocomplete="email" required>
+  <label for="formspree-message">Your message</label>
+  <textarea id="formspree-message" name="message" rows="5" required></textarea>
+  <button type="submit">Send</button>
+</form>
